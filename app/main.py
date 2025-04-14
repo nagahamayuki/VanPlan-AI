@@ -4,11 +4,10 @@ import psycopg2
 import os
 from dotenv import load_dotenv
 
-load_dotenv()  # .envから読み込み
+load_dotenv()
 
 app = FastAPI()
 
-# Supabase接続情報
 DB_CONFIG = {
     'host': os.getenv("DB_HOST"),
     'port': int(os.getenv("DB_PORT", 5432)),
